@@ -1,0 +1,23 @@
+package javaclassweek4;
+import java.util.Scanner;
+public class CraftPricing 
+{
+    public static void main(String[] args)
+    {
+        //get the inputs
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter Product name: ");
+        String name = input.nextLine();
+        System.out.print("Enter the cost of material: ");
+        double mat = input.nextDouble(); //double use double in next //mat is material
+        System.out.print("Enter the hours: ");
+        double hrs = input.nextDouble();
+        double price = math_man(mat, hrs); //catch the double
+        System.out.println("The price is $" + price + "dollars");
+    }
+    public static double math_man(double mat, double hrs)  //price is double //helper takes to number and give backa double
+    {
+        double price = mat + 12 * hrs + 7;
+        return price;
+    }
+}
