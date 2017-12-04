@@ -1,0 +1,25 @@
+package javaclassweek4;
+import java.util.Scanner;
+public class MetricConversion 
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number");
+        int a = input.nextInt();
+        convert_to_cm(a);   //call the helper
+        convert_to_liter(a);
+    }
+    
+    //calls two methods
+    public static void convert_to_cm(int x)  //the helper
+    {
+        double cm = 2.54 * x;
+        System.out.println(x + " inches is the same as " + cm + " centimeters");
+    }
+     public static void convert_to_liter(int x)
+     {
+        double liters = 3.7854 * x;
+        System.out.println(x + " gallons is the same as " + liters + " liters"); 
+     }
+}
