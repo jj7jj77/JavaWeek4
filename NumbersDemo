@@ -1,0 +1,38 @@
+package javaclassweek4;
+public class NumbersDemo 
+{
+    public static void main(String[] args) 
+    {
+        int a = 3;
+        int b = 5;
+        
+        //calling the helper twice
+        displayTwiceTheNumber(a);
+        displayTwiceTheNumber(b);
+        
+        //calling the helper twice
+        displayNumberPlusFive(a);
+        displayNumberPlusFive(b);
+        displayNumberSquared(a);
+        displayNumberSquared(b);
+    }
+    
+//main has three helpers:
+       public static void displayTwiceTheNumber(int x)   //pass a value 
+       {
+           int y = 2 * x;
+           System.out.println("Twice the numeber is " + y);
+       }
+       public static void displayNumberPlusFive(int x)
+       {
+           int y = 5 + x;
+           System.out.println("Number plus five is " + y);
+       }
+       public static void displayNumberSquared(int x)
+       {
+           int y = x*x;
+           System.out.println("Number Squared is " + y);
+       }        
+}  
+
+//#b: scanner input a and input b
