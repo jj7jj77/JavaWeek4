@@ -1,0 +1,23 @@
+package javaclassweek4;
+public class Percentages 
+{
+    public static void main(String[] args)
+    {
+    double a = 1.5;
+    double b = 8.4;
+    computePercent (a,b);  //call its name and send in the varibles
+    computePercent (b,a);
+    }
+    public static void computePercent(double x, double y)  //passing in two parameters
+    {
+        System.out.println("the fist value is " + x);   //displays the two values
+        System.out.println("the second value is " + y);
+        
+        //3 is 60% of 5: (3/5)*100
+        //percent = (x/y)*100
+        double percent = (x/y) * 100;
+        System.out.println(x + "is " + (int)percent + "% percent of " + y);  //display percent     
+    }
+}
+
+//#b scanner for the helpers
