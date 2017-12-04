@@ -1,0 +1,51 @@
+package javaclasshomework4;
+import java.util.Scanner;
+public class PaintCalculator 
+{
+    public static void main(String[] args) 
+    {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("What is the height of the room? ");
+        double height = input.nextDouble();
+        System.out.print("What is the length of the room? ");
+        double length = input.nextDouble();
+        System.out.print("What is the width of the room? ");
+        double width = input.nextDouble();
+        
+        //use as a unit test
+        System.out.println("For this room with a height of " + height + " feet"); 
+        System.out.println("For this room with a length of " + length + " long");
+        System.out.println("For this room with a width of " + width + " wide");
+        
+        double WallAreaTotal = WallArea_Method(length, width, height);
+        System.out.println ("The total area for the room is " + WallAreaTotal);  //for myself to use
+        
+        double paintCansNeeded = paintCansNeeded_Method(WallAreaTotal);
+        double TotalPrice = TotalPrice_Method(paintCansNeeded);
+    }    
+    
+    //Calculates the area of the wall in a room
+    public static double WallArea_Method(double length, double width, double height)  //put variable in order the same way of the entire code
+    {
+        double WallAreaTotal = (length * height * 2) + (width * height * 2);
+        return WallAreaTotal;
+    }
+    
+    //Quantity of paint needed
+    //double paintCansNeeded = PaintNeeded(WallAreaTotal);
+    public static double paintCansNeeded_Method(double WallAreaTotal)
+    {
+        double paintCansNeeded = Math.round(WallAreaTotal / 350); //350 sqft
+        System.out.println("You need to purchase " + paintCansNeeded + " gallons of paint");
+        return paintCansNeeded;
+    }    
+    
+    //double TotalPrice = Paint_Quantity_Needed;
+    public static double TotalPrice_Method(double paintCansNeeded)
+    {
+        double TotalPrice = paintCansNeeded * 32.0;
+        System.out.println("The price for painting the room will be $ " + TotalPrice);
+        return TotalPrice;
+    }
+}
